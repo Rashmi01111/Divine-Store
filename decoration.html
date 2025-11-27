@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divine Store – Decoration</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+body{
+    background:url('https://img.freepik.com/free-vector/decorative-elegant-floral-texture-backdrop-vintage-style_1017-59142.jpg?semt=ais_hybrid&w=740&q=80') no-repeat center/cover fixed;
+    color:#fff;
+}
+header{
+    background:rgba(0,0,0,0.85);
+    padding:15px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid gold;
+}
+header h1{color:gold;font-size:28px;}
+nav a{
+    margin-left:18px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:6px;
+    transition:0.3s;
+}
+nav a:hover{background:gold;color:#000;}
+.section{
+    padding:50px 25px;
+    max-width:1200px;
+    margin:50px auto;
+    background:rgba(0,0,0,0.55);
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+}
+h2{color:gold;font-size:32px;text-align:center;margin-bottom:30px;}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+.card{
+    background:rgba(255,255,255,0.1);
+    padding:15px;
+    border-radius:16px;
+    text-align:center;
+    transition:0.3s;
+    backdrop-filter:blur(4px);
+}
+.card:hover{
+    transform:scale(1.03);
+    background:rgba(255,255,255,0.2);
+}
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:14px;
+}
+.card h3{margin-top:15px;color:gold;}
+.card p{margin:10px 0;font-weight:600;}
+.btn{
+    padding:10px 20px;
+    background:gold;
+    color:#000;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s;
+}
+.btn:hover{background:#fff;}
+/* Cart panel */
+#cart{
+    position:fixed;
+    right:20px;
+    top:80px;
+    width:300px;
+    max-height:70vh;
+    overflow-y:auto;
+    background:rgba(0,0,0,0.9);
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    z-index:9999;
+}
+#cart h3{color:gold;text-align:center;margin-bottom:10px;}
+.cart-item{display:flex;justify-content:space-between;margin:8px 0;color:#fff;}
+.cart-item span{font-weight:600;}
+#cart button{margin-top:10px;padding:8px 12px;background:red;color:#fff;border:none;border-radius:8px;cursor:pointer;}
+@media(max-width:768px){.section{padding:40px 20px;}h2{font-size:28px;}#cart{width:90%;right:5%;top:100px;}}
+@media(max-width:480px){.section{padding:30px 15px;}h2{font-size:24px;}}
+</style>
+</head>
+<body>
+<header>
+<h1>Divine Store</h1>
+<nav>
+<a href="home.html">Home</a>
+<a href="decoration.html">Decoration</a>
+<a href="gifiting.html">Gifting</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="section">
+<h2>Mandir Decoration Items</h2>
+<div class="grid">
+
+<!-- Existing 4 items -->
+<div class="card" data-name="Mandir Lights" data-price="199">
+<img src="https://mandirstudio.in/wp-content/uploads/2024/10/2-1.jpg?v=1736775514" alt="Mandir Lights">
+<h3>Mandir Lights</h3>
+<p>₹199</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Flower Garland" data-price="150">
+<img src="https://t3.ftcdn.net/jpg/17/85/24/90/360_F_1785249056_ZQAaV1k4tkmxwWqjCoh9nA47dPAC4zDd.jpg" alt="Flower Garland">
+<h3>Flower Garland</h3>
+<p>₹150</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Wall Hangings" data-price="299">
+<img src="https://i.pinimg.com/736x/25/d8/8c/25d88cd831f861e2869befaf7357ed76.jpg" alt="Wall Hangings">
+<h3>Wall Hangings</h3>
+<p>₹299</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Mandir Curtain" data-price="399">
+<img src="https://www.thepackersmovers.com/blog/wp-content/uploads/2022/12/vintage-style-mandir-design-for-Indian-homes-with-a-twist-1.jpg" alt="Mandir Curtain">
+<h3>Mandir Curtain</h3>
+<p>₹399</p>
+<button class="btn">Add to Cart</button>
+</div>
+
+<!-- New 6 items -->
+<div class="card" data-name="Incense Holder" data-price="120">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbt2gSNoRJblzwMd-IP0r7iT7IwjJS7NjIFw&s" alt="Incense Holder">
+<h3>Incense Holder</h3>
+<p>₹120</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Oil Lamps" data-price="250">
+<img src="https://media.istockphoto.com/id/870955528/photo/paraffin-lamp.jpg?s=612x612&w=0&k=20&c=XijEMnkdEuHbEQB4uqulG1JsKLUltIfhaJ7qKg8oFf0=" alt="Oil Lamps">
+<h3>Oil Lamps</h3>
+<p>₹250</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Decorative Bells" data-price="180">
+<img src="https://craftzone.in/backend/uploads/products/SKU0000000556/a77b857b7d12b06375efe6550d50bf38.webp" alt="Decorative Bells">
+<h3>Decorative Bells</h3>
+<p>₹180</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Mandir Mat" data-price="220">
+<img src="https://www.kuberindustries.co.in/uploads/kuberindustries/products/kuber-industries-prayer-mat--velvet-aasan-mat--meditation-prayer-carpet-mat--pooja-aasan-mat--check--83053352548821_l.jpg" alt="Mandir Mat">
+<h3>Mandir Mat</h3>
+<p>₹220</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Garland Set" data-price="170">
+<img src="https://thumbs.dreamstime.com/b/lit-purple-candle-wooden-step-adorned-pink-green-garland-set-against-backdrop-soft-bokeh-lights-sparkling-cloth-390575210.jpg" alt="Garland Set">
+<h3>Garland Set</h3>
+<p>₹170</p>
+<button class="btn">Add to Cart</button>
+</div>
+<div class="card" data-name="Mandir Poster" data-price="200">
+<img src="https://m.media-amazon.com/images/I/613hfI4O6SL._AC_UF894,1000_QL80_.jpg" alt="Mandir Poster">
+<h3>Mandir Poster</h3>
+<p>₹200</p>
+<button class="btn">Add to Cart</button>
+</div>
+
+</div>
+</section>
+
+<!-- Cart -->
+<div id="cart">
+<h3>My Cart</h3>
+<div id="cart-items"></div>
+<p>Total: ₹<span id="cart-total">0</span></p>
+<button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<script>
+// Cart functionality
+let cart = [];
+const cartItems = document.getElementById('cart-items');
+const cartTotal = document.getElementById('cart-total');
+
+document.querySelectorAll('.btn').forEach(button=>{
+    button.addEventListener('click',()=>{
+        const card = button.parentElement;
+        const name = card.dataset.name;
+        const price = parseInt(card.dataset.price);
+        addToCart(name,price);
+    });
+});
+
+function addToCart(name, price){
+    cart.push({name, price});
+    renderCart();
+}
+
+function renderCart(){
+    cartItems.innerHTML = '';
+    let total = 0;
+    cart.forEach((item,index)=>{
+        total += item.price;
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `<span>${item.name}</span> <span>₹${item.price}</span> <button onclick="removeItem(${index})">x</button>`;
+        cartItems.appendChild(div);
+    });
+    cartTotal.textContent = total;
+}
+
+function removeItem(index){
+    cart.splice(index,1);
+    renderCart();
+}
+
+function clearCart(){
+    cart = [];
+    renderCart();
+}
+</script>
+
+</body>
+</html>
