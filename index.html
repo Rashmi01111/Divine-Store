@@ -4,43 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Divine Store – Home</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
-body{background:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80') no-repeat center/cover fixed;color:#fff;}
-header{background:rgba(0,0,0,0.7);padding:15px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;border-bottom:2px solid gold;}
-header h1{color:gold;font-size:28px;}
-nav a{margin-left:18px;text-decoration:none;color:#fff;font-weight:600;padding:6px 12px;border-radius:6px;transition:0.3s;}
-nav a:hover{background:gold;color:#000;}
-.hero{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:20px;background:rgba(0,0,0,0.5);border-radius:20px;margin:20px;}
-.hero h2{font-size:42px;color:gold;margin-bottom:15px;text-shadow:0 0 10px black;}
-.hero p{font-size:20px;max-width:700px;line-height:1.6;margin-bottom:20px;}
-.btn{padding:14px 30px;background:gold;color:#000;border:none;border-radius:12px;font-weight:700;cursor:pointer;font-size:18px;transition:0.3s;}
-.btn:hover{background:#fff;}
-@media(max-width:768px){.hero h2{font-size:36px;}.hero p{font-size:18px;}}
-@media(max-width:480px){.hero h2{font-size:28px;}.hero p{font-size:16px;}.hero{margin:10px;}}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    background:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80')
+    no-repeat center/cover fixed;
+    color:#fff;
+}
+
+/* ---------------- NAVIGATION BAR ---------------- */
+header{
+    background:rgba(0,0,0,0.8);
+    padding:12px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:2px solid gold;
+}
+
+header h1{
+    color:gold;
+    font-size:28px;
+}
+
+/* Menu items */
+nav{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    padding:6px 12px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background:gold;
+    color:#000;
+}
+
+/* ----------- Mobile Menu Icon ----------- */
+.menu-icon{
+    display:none;
+    font-size:28px;
+    color:gold;
+    cursor:pointer;
+}
+
+/* ----------- Responsive Menu (Mobile) ----------- */
+@media(max-width:768px){
+    nav{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:rgba(0,0,0,0.9);
+        width:200px;
+        padding:20px;
+        border-left:2px solid gold;
+        border-bottom:2px solid gold;
+        flex-direction:column;
+        gap:15px;
+        display:none;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-icon{
+        display:block;
+    }
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero{
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.5);
+    border-radius:20px;
+    margin:20px;
+}
+
+.hero h2{
+    font-size:42px;
+    color:gold;
+    margin-bottom:15px;
+    text-shadow:0 0 10px black;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+.btn{
+    padding:14px 30px;
+    background:gold;
+    color:#000;
+    border:none;
+    border-radius:12px;
+    font-weight:700;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+@media(max-width:768px){
+    .hero h2{font-size:34px;}
+    .hero p{font-size:17px;}
+}
+
+@media(max-width:480px){
+    .hero h2{font-size:28px;}
+    .hero p{font-size:16px;}
+    .hero{margin:10px;}
+}
 </style>
+
 </head>
 <body>
+
 <header>
-<h1>Divine Store</h1>
-<nav>
-<a href="#index">Home</a>
-<a href="#about">About</a>
-<a href="decoration.html">Decoration</a>
-<a href="gifiting.html">Gifting</a>
-<a href="contact.html">Contact</a>
-</nav>
+    <h1>Divine Store</h1>
+
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="decoration.html">Decoration</a>
+        <a href="gifting.html">Gifting</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </header>
 
+<!-- HERO SECTION -->
 <section class="hero" id="home">
-<h2>Welcome to Divine Store ✨</h2>
-<p>Discover the finest Bhagwan Ji Poshak, beautiful Decorations, and exquisite Gifting Murtis. Our store brings devotion and elegance together, all in one divine place.</p>
-<button class="btn" onclick="window.location='#about'">Learn More</button>
+    <h2>Welcome to Divine Store ✨</h2>
+    <p>Discover the finest Bhagwan Ji Poshak, beautiful Decorations, and exquisite Gifting Murtis. Our store brings devotion and elegance together, all in one divine place.</p>
+    <button class="btn" onclick="window.location='#about'">Learn More</button>
 </section>
 
-<section class="section" id="about" style="padding:30px;max-width:900px;margin:40px auto;background:rgba(0,0,0,0.55);border-radius:20px;backdrop-filter:blur(5px);text-align:center;">
-<h2 style="color:gold;margin-bottom:15px;">About Divine Store</h2>
-<p style="color:#fff;font-size:18px;line-height:1.6;">Divine Store is your one-stop destination for all devotional needs. We offer high-quality Poshak for Bhagwan Ji, decorative items for your Mandir, and gifting murtis perfect for any occasion. Experience shopping with devotion and elegance, responsive on any device.</p>
+<!-- ABOUT SECTION -->
+<section class="section" id="about" style="
+    padding:30px;
+    max-width:900px;
+    margin:40px auto;
+    background:rgba(0,0,0,0.55);
+    border-radius:20px;
+    backdrop-filter:blur(5px);
+    text-align:center;">
+    <h2 style="color:gold;margin-bottom:15px;">About Divine Store</h2>
+    <p style="color:#fff;font-size:18px;line-height:1.6;">
+        Divine Store is your one-stop destination for all devotional needs. We offer high-quality Poshak for Bhagwan Ji, decorative items for your Mandir, and gifting murtis perfect for any occasion.
+    </p>
 </section>
+
+<script>
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
